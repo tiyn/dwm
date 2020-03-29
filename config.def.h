@@ -111,7 +111,6 @@ static Key keys[] = {
 	{ 0,							XF86XK_MonBrightnessDown,	spawn,			SHCMD("light -U 15") },
 	{ 0,							XF86XK_MonBrightnessUp,		spawn,			SHCMD("light -A 15") },
 	//{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = +1 } },
-	//{ MODKEY|ShiftMask,             XK_d,	   togglefloating, {0} },
 	//{ MODKEY|ShiftMask,			  XK_z,      incnmaster,     {.i = -1 } },
 	//{ MODKEY,                       XK_space,  setlayout,      {0} },
 	//{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
