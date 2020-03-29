@@ -36,7 +36,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -95,7 +95,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,						spawn,          {.v = dmenucmd } },
 	{ MODKEY,						XK_s,						spawn,          SHCMD("startpagesearch") },
 	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_z,						setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_z,						setmfact,       {.f = -0.05} },
 	{ MODKEY,						XK_F5,						spawn,			SHCMD("togglemonitor") },
 	{ MODKEY,						XK_F6,						spawn,			SHCMD("toggletouchpad") },
 	{ MODKEY,						XK_F7,						spawn,			SHCMD("dmenumount") },

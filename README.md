@@ -32,7 +32,7 @@ Super +         q                 ->      Close current window
 Super + Shift + r                 ->      (dmenu) dmenu_run
 Super +         s                 ->      (dmenu) startpagesearch
 Super + Shift + t                 ->      Enable tiling layout
-Super +         z                 ->      (Tiling) Decrease master window size
+Super + Shift + z                 ->      (Tiling) Decrease master window size
 Super +         F5                ->      enable 2 Screen Monitor
 Super +         F6                ->      toggle touchpad
 Super +         F7                ->      (dmenu) mounting drives
