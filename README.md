@@ -33,6 +33,10 @@ Super + Shift + r                 ->      (dmenu) dmenu_run
 Super +         s                 ->      (dmenu) startpagesearch
 Super + Shift + t                 ->      Enable tiling layout
 Super + Shift + z                 ->      (Tiling) Decrease master window size
+Super +         0                 ->      Show all tags
+Super + Shift + 0                 ->      Add current window to all tag
+Super +		  + 1/2/.../9		  ->	  Shot tag 1/2/.../9
+Super + Shift + 1/2/.../9		  ->	  Add current window to tag 1/2/.../9
 Super +         F5                ->      enable 2 Screen Monitor
 Super +         F6                ->      toggle touchpad
 Super +         F7                ->      (dmenu) mounting drives
