@@ -19,6 +19,7 @@ Super + Shift + Escape            ->      Quit dwm
 Super +         Return            ->      Spawn st
 Super +         b                 ->      Spawn firefox
 Super + Shift + b                 ->      Toggle dwmbar
+Super + Shift + c                 ->      Enable deck(/card) layout
 Super + Shift + d                 ->      Toggle floating/tiled for selected window
 Super +         f                 ->      Spawn vifm in st
 Super + Shift + f                 ->      Enable fullscreen layout
