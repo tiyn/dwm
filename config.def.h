@@ -84,6 +84,7 @@ static Key keys[] = {
 	{ MODKEY,						XK_Return,					spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,						spawn,			{.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_b,						togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_c,						setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_d,						togglefloating, {0} },
 	{ MODKEY,                       XK_f,						spawn,			{.v = filecmd } },
 	{ MODKEY|ShiftMask,				XK_f,						setlayout,      {.v = &layouts[2]} },
