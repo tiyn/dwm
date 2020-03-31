@@ -6,6 +6,7 @@ It is supposed to work in the environment after the larbs-base-installation.
 ## Patches
 The list below shows the currently applied patches to the master branch.
 - dwm-alpha-6.2.diff
+- dwm-fakefullscreen-20170508-ceac8c9.diff
 - dwm-noborder-6.2.diff
 - dwm-pertag-20170513-ceac8c9.diff
 
