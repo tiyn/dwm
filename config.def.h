@@ -49,10 +49,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "[]=",      tile },    /* first entry is default */
 	{ "[D]",      deck },
+	{ "><>",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions */
@@ -85,10 +85,10 @@ static Key keys[] = {
 	{ MODKEY,						XK_Return,					spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,						spawn,			{.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_b,						togglebar,      {0} },
-	{ MODKEY|ShiftMask,             XK_c,						setlayout,      {.v = &layouts[3]} },
+	{ MODKEY|ShiftMask,             XK_c,						setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_d,						togglefloating, {0} },
 	{ MODKEY,                       XK_f,						spawn,			{.v = filecmd } },
-	{ MODKEY|ShiftMask,				XK_f,						setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,				XK_f,						setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_h,						focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,						zoom,			{0} },
 	{ MODKEY,						XK_i,						spawn,			{.v = javaidecmd } },
@@ -103,7 +103,7 @@ static Key keys[] = {
 	{ MODKEY,						XK_q,						killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_r,						spawn,          {.v = dmenucmd } },
 	{ MODKEY,						XK_s,						spawn,          SHCMD("startpagesearch") },
-	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_z,						setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_0,						view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,						tag,            {.ui = ~0 } },
