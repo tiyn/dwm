@@ -23,7 +23,7 @@ There are various shortcuts and hotkeys used in this version. Included in my bui
 | Super  | Shift | c                 | Enable deck(/card) layout                                 |
 | Super  | Shift | d                 | Toggle floating/tiled for selected window                 |
 | Super  |       | f                 | Spawn vifm in st                                          |
-| Super  | Shift | f                 | Enable fullscreen layout                                  |
+| Super  | Shift | f                 | Toggle fullscreen                                         |
 | Super  |       | h                 | (Tiling/Deck) Focus window higher in stack than current   |
 | Super  | Shift | h                 | (Tiling/Deck) Make current window the master window       |
 | Super  |       | i                 | Spawn intellij-idea-ultimate-edition                      |
@@ -33,6 +33,7 @@ There are various shortcuts and hotkeys used in this version. Included in my bui
 | Super  | Shift | k                 | (Tiling/Deck) Make current window the master window       |
 | Super  |       | l                 | (Tiling/Deck) Focus window lower in stack than current    |
 | Super  |       | m                 | Spawn thunderbird                                         |
+| Super  | Shift | m                 | Enable monocle layout	                                 |
 | Super  | Shift | o                 | (Tiling/Deck) Increase master window size                 |
 | Super  |       | p                 | Spawn ncmpcpp in st                                       |
 | Super  |       | q                 | Close current window                                      |
