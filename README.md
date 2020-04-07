@@ -5,10 +5,10 @@ It is supposed to work in the environment after the larbs-base-installation.
 
 ## Patches
 The list below shows the currently applied patches to the master branch.
+- dwm-actualfullscreen-20191112-cb3f58a.diff (enables true fullscreen)
 - dwm-alpha-6.2.diff (adds transparency)
 - dwm-center-6.1.diff (adds ability to center floating windows at launch)
 - dwm-deck-6.0.diff (adds deck layout)
-- dwm-fakefullscreen-20170508-ceac8c9.diff (allows windows to only use their window as 'fullscreen')
 - dwm-noborder-6.2.diff (removes border if there is only one window)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
 
