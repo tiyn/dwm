@@ -69,41 +69,24 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "20", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[] = { "firefox", NULL };
-static const char *filecmd[] = {"st", "-e", "vifmrun", NULL };
-static const char *javaidecmd[] = {"intellij-idea-ultimate-edition", NULL };
-static const char *mailcmd[] = {"thunderbird", NULL };
-static const char *musiccmd[] = {"st", "-e", "ncmpcpp", NULL };
-static const char *lockcmd[] = {"prompt", "Lock computer?", "slock", NULL };
-static const char *rebootcmd[] = {"prompt", "Reboot computer?", "sudo -A shutdown -h now", NULL };
-static const char *shutdowncmd[] = {"prompt", "Shutdown computer?", "sudo -A shutdown -h now", NULL };
 
 static Key keys[] = {
 	/* modifier                     key							function		argument */
 	{ MODKEY|ShiftMask,             XK_Escape,					quit,			{0} },
-	{ MODKEY,						XK_Return,					spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,						spawn,			{.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_b,						togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,						setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_d,						togglefloating, {0} },
-	{ MODKEY,                       XK_f,						spawn,			{.v = filecmd } },
 	{ MODKEY|ShiftMask,             XK_f,						togglefullscr,  {0} },
 	{ MODKEY,                       XK_h,						focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,						zoom,			{0} },
-	{ MODKEY,						XK_i,						spawn,			{.v = javaidecmd } },
 	{ MODKEY,                       XK_j,						focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_j,						zoom,			{0} },
 	{ MODKEY,                       XK_k,						focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_k,						zoom,			{0} },
 	{ MODKEY,                       XK_l,						focusstack,     {.i = +1 } },
-	{ MODKEY,						XK_m,						spawn,			{.v = mailcmd } },
 	{ MODKEY|ShiftMask,				XK_m,						setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_o,						setmfact,       {.f = +0.05} },
-	{ MODKEY,						XK_p,						spawn,			{.v = musiccmd } },
 	{ MODKEY,						XK_q,						killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_r,						spawn,          {.v = dmenucmd } },
-	{ MODKEY,						XK_s,						spawn,          SHCMD("startpagesearch") },
 	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_z,						setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_0,						view,           {.ui = ~0 } },
@@ -112,20 +95,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,						XK_F5,						spawn,			SHCMD("togglemonitor") },
-	{ MODKEY,						XK_F6,						spawn,			SHCMD("toggletouchpad") },
-	{ MODKEY,						XK_F7,						spawn,			SHCMD("dmenumount") },
-	{ MODKEY,						XK_F8,						spawn,			SHCMD("dmenuumount") },
-	{ MODKEY,						XK_F9,						spawn,			SHCMD("sudo -A systemctl restart NetworkManager") },
-	{ MODKEY,						XK_F10,						spawn,			{.v = lockcmd } },
-	{ MODKEY,						XK_F11,						spawn,			{.v = rebootcmd } },
-	{ MODKEY,						XK_F12,						spawn,			{.v = shutdowncmd } },
-	{ 0,							XF86XK_AudioMute,			spawn,			SHCMD("lmc m; refbar") },
-	{ 0,							XF86XK_AudioMicMute,		spawn,			SHCMD("pactl set-source-mute 1 toggle") },
-	{ 0,							XF86XK_AudioLowerVolume,	spawn,			SHCMD("lmc down 5; refbar") },
-	{ 0,							XF86XK_AudioRaiseVolume,	spawn,			SHCMD("lmc up 5; refbar") },
-	{ 0,							XF86XK_MonBrightnessDown,	spawn,			SHCMD("light -U 15") },
-	{ 0,							XF86XK_MonBrightnessUp,		spawn,			SHCMD("light -A 15") },
 	//{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = +1 } },
 	//{ MODKEY|ShiftMask,			  XK_z,      incnmaster,     {.i = -1 } },
 	//{ MODKEY,                       XK_space,  setlayout,      {0} },
@@ -147,7 +116,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
