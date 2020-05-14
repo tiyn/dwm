@@ -23,7 +23,6 @@ There are various shortcuts and hotkeys used in this version. Included in my bui
 | Super  | Shift | f                 | Toggle fullscreen                                         |
 | Super  |       | h                 | (Tiling/Deck) Focus window higher in stack than current   |
 | Super  | Shift | h                 | (Tiling/Deck) Make current window the master window       |
-| Super  |       | i                 | Spawn intellij-idea-ultimate-edition                      |
 | Super  |       | j                 | (Tiling/Deck) Focus window lower in stack than current    |
 | Super  | Shift | j                 | (Tiling/Deck) Make current window the master window       |
 | Super  |       | k                 | (Tiling/Deck) Focus window higher in stack than current   |
