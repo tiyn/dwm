@@ -11,6 +11,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-deck-6.0.diff (adds deck layout)
 - dwm-noborder-6.2.diff (removes border if there is only one window)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
+- dwm-statuscmd-6.2.diff (enables dwmblocks compatibility)
 
 ## Hotkeys
 There are various shortcuts and hotkeys used in this version. Included in my build are the following.
