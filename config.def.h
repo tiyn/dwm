@@ -37,8 +37,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class							instance							title       tags mask     isCentered	 isfloating   monitor */
-	{ "Gimp",							NULL,								NULL,       0,            0,             1,           -1 },
-	{ "Firefox",						NULL,								NULL,       1 << 8,       0,			 0,           -1 },
 	{ NULL,								"de.uol.swp.client.ClientApp",		NULL,       0,            0,			 1,           -1 },
 };
 
