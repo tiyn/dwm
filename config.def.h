@@ -12,8 +12,6 @@ static const char *fonts[]          = { "monospace:size=10", "Noto Color Emoji:s
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const unsigned int baralpha = 0xff;
-static const unsigned int borderalpha = 0xff;
 static const char col_gray3[]       = "#f7f7f7";
 static const char col_gray4[]       = "#000000";
 static const char col_cyan[]        = "#a62238";
@@ -21,11 +19,6 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3 },
-};
-static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -36,7 +29,6 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class							instance							title       tags mask     isCentered	 isfloating   monitor */
 	{ NULL,								"de.uol.swp.client.ClientApp",		NULL,       0,            0,			 1,           -1 },
 };
 
