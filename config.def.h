@@ -45,6 +45,8 @@ static const Layout layouts[] = {
 	{ "M",      monocle },
 	{ "T",      tile },    /* first entry is default */
 	{ "D",      deck },
+	{ "B",      bstack },
+	{ "=",      bstackhoriz },
 	{ "F",      NULL },    /* no layout function means floating behavior */
 };
 
@@ -77,10 +79,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,						focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_k,						zoom,			{0} },
 	{ MODKEY,                       XK_l,						focusstack,     {.i = +1 } },
-	{ MODKEY|ShiftMask,				XK_m,						setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,		XK_m,						setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_o,						setmfact,       {.f = +0.05} },
-	{ MODKEY,						XK_q,						killclient,     {0} },
+	{ MODKEY,			XK_q,						killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,             XK_u,                                           setlayout,      {.v = &layouts[3]} },
+	{ MODKEY|ShiftMask,             XK_v,                                           setlayout,      {.v = &layouts[4]} },
 	{ MODKEY|ShiftMask,             XK_z,						setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_0,						view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,						tag,            {.ui = ~0 } },
@@ -88,9 +92,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	//{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = +1 } },
-	//{ MODKEY|ShiftMask,			  XK_z,      incnmaster,     {.i = -1 } },
-	//{ MODKEY,                       XK_space,  setlayout,      {0} },
+	//{ MODKEY|ShiftMask,           XK_o,      incnmaster,     {.i = +1 } },
+	//{ MODKEY|ShiftMask,	        XK_z,      incnmaster,     {.i = -1 } },
+	//{ MODKEY,                     XK_space,  setlayout,      {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
