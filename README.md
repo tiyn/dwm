@@ -6,6 +6,8 @@ This belongs to my larbs installation script and depends heavily on its scripts
 and programs.
 It is supposed to work in the environment after the larbs-base-installation.
 This is my patched version of dwm. The base version is directly from suckless.org.
+This repository is set up according to the
+[suckless entry of my wiki](https://github.com/tiyn/wiki/blob/master/wiki/linux/suckless.md).
 
 ## Patches
 
