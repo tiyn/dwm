@@ -31,8 +31,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     iscentered     isfloating   monitor */
-	{ NULL,								"de.uol.swp.client.ClientApp",		NULL,       0,            0,			 1,           -1 },
+	/* class    instance                        title       tags mask     iscentered    isfloating   monitor */
+	{ NULL,	    "origin.exe",                   NULL,       0,            0,	    1,           -1 },
 };
 
 /* layout(s) */

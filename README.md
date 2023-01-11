@@ -30,30 +30,30 @@ build are the following.
 
 | ModKey | Shift | Key | Function |
 | ------ | ----- | --- | -------- |
+| Super | | h | (Tiling/Deck) Focus window higher in stack than current |
+| Super | | j | (Tiling/Deck) Focus window lower in stack than current |
+| Super | | k | (Tiling/Deck) Focus window higher in stack than current |
+| Super | | l | (Tiling/Deck) Focus window lower in stack than current |
+| Super | | q | Close current window |
+| Super | | 0 | Show all tags |
+| Super | | 1/2/.../9 | Show tag 1/2/.../9 |
+| Super | | . | Show monitor lower in stack |
+| Super | | , | Show monitor higher in stack |
 | Super | Shift | Escape | Quit dwm |
 | Super | Shift | b | Toggle dwmbar |
 | Super | Shift | c | Enable deck(/card) layout |
 | Super | Shift | d | Toggle floating/tiled for selected window |
 | Super | Shift | f | Toggle fullscreen |
-| Super | | h | (Tiling/Deck) Focus window higher in stack than current |
 | Super | Shift | h | (Tiling/Deck) Make current window the master window |
-| Super | | j | (Tiling/Deck) Focus window lower in stack than current |
 | Super | Shift | j | (Tiling/Deck) Make current window the master window |
-| Super | | k | (Tiling/Deck) Focus window higher in stack than current |
 | Super | Shift | k | (Tiling/Deck) Make current window the master window |
-| Super | | l | (Tiling/Deck) Focus window lower in stack than current |
 | Super | Shift | m | Enable monocle layout |
 | Super | Shift | o | (Tiling/Deck) Increase master window size |
-| Super | | q | Close current window |
 | Super | Shift | t | Enable tiling layout |
 | Super | Shift | u | Enable bottomstack layout |
 | Super | Shift | v | Enable bottomstackhorizontal layout |
 | Super | Shift | z | (Tiling/Deck) Decrease master window size |
-| Super | | 0 | Show all tags |
 | Super | Shift | 0 | Add current window to all tag |
-| Super | | 1/2/.../9 | Show tag 1/2/.../9 |
 | Super | Shift | 1/2/.../9 | Add current window to tag 1/2/.../9 |
-| Super | | . | Show monitor lower in stack |
 | Super | Shift | . | Add to monitor lower in stack |
-| Super | | , | Show monitor higher in stack |
 | Super | Shift | , | Add to monitor higher in stack |
