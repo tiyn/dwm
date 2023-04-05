@@ -34,7 +34,6 @@ build are the following.
 | Super | | j | (Tiling/Deck) Focus window lower in stack than current |
 | Super | | k | (Tiling/Deck) Focus window higher in stack than current |
 | Super | | l | (Tiling/Deck) Focus window lower in stack than current |
-| Super | | q | Close current window |
 | Super | | 0 | Show all tags |
 | Super | | 1/2/.../9 | Show tag 1/2/.../9 |
 | Super | | . | Show monitor lower in stack |
@@ -49,6 +48,7 @@ build are the following.
 | Super | Shift | k | (Tiling/Deck) Make current window the master window |
 | Super | Shift | m | Enable monocle layout |
 | Super | Shift | o | (Tiling/Deck) Increase master window size |
+| Super | Shift | q | Close current window |
 | Super | Shift | t | Enable tiling layout |
 | Super | Shift | u | Enable bottomstack layout |
 | Super | Shift | v | Enable bottomstackhorizontal layout |

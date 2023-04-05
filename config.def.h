@@ -80,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,						focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_m,						setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_o,						setmfact,       {.f = +0.05} },
-	{ MODKEY,			XK_q,						killclient,     {0} },
+	{ MODKEY|ShiftMask,		XK_q,						killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_t,						setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_u,                                           setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_v,                                           setlayout,      {.v = &layouts[4]} },
