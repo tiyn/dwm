@@ -2155,8 +2155,10 @@ void
 updatestatus(void)
 {
 	Monitor* m;
-	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
+	if (!gettextprop(root, XA_WM_NAME, rawstext, sizeof(rawstext)))
 		strcpy(stext, "dwm-"VERSION);
+	else
+		copyvalidchars(stext, rawstext);
 	for(m = mons; m; m = m->next)
 		drawbar(m);
 }
