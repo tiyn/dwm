@@ -22,7 +22,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
 - dwm-statusallmons-6.2.diff (display statusbar on every monitors)
 - dwm-statuscmd-6.2.diff (enables dwmblocks compatibility)
-- dwm-systray-6.2.diff (adds systray to statusbar)
+- dwm-systray-6.2.diff (adds a systray to statusbar)
 
 ## Hotkeys
 
