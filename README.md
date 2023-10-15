@@ -20,6 +20,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-deck-6.0.diff (adds deck layout)
 - dwm-noborder-6.2.diff (removes border if there is only one window)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
+- dwm-status2d-6.2.diff (adds colors and ability to draw rectangles)
 - dwm-statusallmons-6.2.diff (display statusbar on every monitors)
 - dwm-statuscmd-6.2.diff (enables dwmblocks compatibility)
 - dwm-systray-6.2.diff (adds a systray to statusbar)
