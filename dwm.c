@@ -72,6 +72,7 @@
 #define VERSION_MAJOR               0
 #define VERSION_MINOR               0
 #define XEMBED_EMBEDDED_VERSION (VERSION_MAJOR << 16) | VERSION_MINOR
+#define OPAQUE                  0xffU
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
@@ -275,6 +276,7 @@ static Client *wintosystrayicon(Window w);
 static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
+static void xinitvisual();
 static void zoom(const Arg *arg);
 static void bstack(Monitor *m);
 static void bstackhoriz(Monitor *m);
@@ -317,6 +319,11 @@ static Display *dpy;
 static Drw *drw;
 static Monitor *mons, *selmon;
 static Window root, wmcheckwin;
+
+static int useargb = 0;
+static Visual *visual;
+static int depth;
+static Colormap cmap;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
@@ -954,13 +961,13 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 					char buf[8];
 					memcpy(buf, (char*)text+i+1, 7);
 					buf[7] = '\0';
-					drw_clr_create(drw, &drw->scheme[ColFg], buf);
+					drw_clr_create(drw, &drw->scheme[ColFg], buf, alphas[SchemeNorm][ColFg]);
 					i += 7;
 				} else if (text[i] == 'b') {
 					char buf[8];
 					memcpy(buf, (char*)text+i+1, 7);
 					buf[7] = '\0';
-					drw_clr_create(drw, &drw->scheme[ColBg], buf);
+					drw_clr_create(drw, &drw->scheme[ColBg], buf, alphas[SchemeNorm][ColFg]);
 					i += 7;
 				} else if (text[i] == 'd') {
 					drw->scheme[ColFg] = scheme[SchemeNorm][ColFg];
@@ -1951,7 +1958,8 @@ setup(void)
 	sw = DisplayWidth(dpy, screen);
 	sh = DisplayHeight(dpy, screen);
 	root = RootWindow(dpy, screen);
-	drw = drw_create(dpy, screen, root, sw, sh);
+	xinitvisual();
+	drw = drw_create(dpy, screen, root, sw, sh, visual, depth, cmap);
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
@@ -1985,9 +1993,9 @@ setup(void)
 	cursor[CurMove] = drw_cur_create(drw, XC_fleur);
 	/* init appearance */
 	scheme = ecalloc(LENGTH(colors) + 1, sizeof(Clr *));
-	scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], 3);
+        scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], alphas[0], 3);
 	for (i = 0; i < LENGTH(colors); i++)
-		scheme[i] = drw_scm_create(drw, colors[i], 3);
+		scheme[i] = drw_scm_create(drw, colors[i], alphas[i], 3);
 	/* init system tray */
 	updatesystray();
 	/* init bars */
@@ -2290,7 +2298,9 @@ updatebars(void)
 	Monitor *m;
 	XSetWindowAttributes wa = {
 		.override_redirect = True,
-		.background_pixmap = ParentRelative,
+		.background_pixel = 0,
+		.border_pixel = 0,
+		.colormap = cmap,
 		.event_mask = ButtonPressMask|ExposureMask
 	};
 	XClassHint ch = {"dwm", "dwm"};
@@ -2300,9 +2310,9 @@ updatebars(void)
 		w = m->ww;
 		if (showsystray && m == systraytomon(m))
 			w -= getsystraywidth();
-		m->barwin = XCreateWindow(dpy, root, m->wx, m->by, w, bh, 0, DefaultDepth(dpy, screen),
-				CopyFromParent, DefaultVisual(dpy, screen),
-				CWOverrideRedirect|CWBackPixmap|CWEventMask, &wa);
+		m->barwin = XCreateWindow(dpy, root, m->wx, m->by, w, bh, 0, depth,
+		                          InputOutput, visual,
+		                          CWOverrideRedirect|CWBackPixel|CWBorderPixel|CWColormap|CWEventMask, &wa);
 		XDefineCursor(dpy, m->barwin, cursor[CurNormal]->cursor);
 		if (showsystray && m == systraytomon(m))
 			XMapRaised(dpy, systray->win);
@@ -2598,7 +2608,7 @@ updatesystray(void)
 	XMapSubwindows(dpy, systray->win);
 	/* redraw background */
 	XSetForeground(dpy, drw->gc, scheme[SchemeNorm][ColBg].pixel);
-	XFillRectangle(dpy, systray->win, drw->gc, 0, 0, w, bh);
+        XFillRectangle(dpy, systray->win, XCreateGC(dpy, root, 0 , NULL), 0, 0, w, bh);
 	XSync(dpy, False);
 }
 
@@ -2770,6 +2780,43 @@ systraytomon(Monitor *m) {
 	if(systraypinningfailfirst && n < systraypinning)
 		return mons;
 	return t;
+}
+
+void
+xinitvisual()
+{
+	XVisualInfo *infos;
+	XRenderPictFormat *fmt;
+	int nitems;
+	int i;
+
+	XVisualInfo tpl = {
+		.screen = screen,
+		.depth = 32,
+		.class = TrueColor
+	};
+	long masks = VisualScreenMask | VisualDepthMask | VisualClassMask;
+
+	infos = XGetVisualInfo(dpy, masks, &tpl, &nitems);
+	visual = NULL;
+	for(i = 0; i < nitems; i ++) {
+		fmt = XRenderFindVisualFormat(dpy, infos[i].visual);
+		if (fmt->type == PictTypeDirect && fmt->direct.alphaMask) {
+			visual = infos[i].visual;
+			depth = infos[i].depth;
+			cmap = XCreateColormap(dpy, root, visual, AllocNone);
+			useargb = 1;
+			break;
+		}
+	}
+
+	XFree(infos);
+
+	if (! visual) {
+		visual = DefaultVisual(dpy, screen);
+		depth = DefaultDepth(dpy, screen);
+		cmap = DefaultColormap(dpy, screen);
+	}
 }
 
 void

@@ -20,10 +20,17 @@ static const char normfgcolor[]     = "#dfdfdf";
 static const char selfgcolor[]      = "#eeeeee";
 static const char selbordercolor[]  = "#555a63";
 static const char selbgcolor[]      = "#282828";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
 	[SchemeSel]  = { selfgcolor, selbgcolor,  selbordercolor },
+};
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
