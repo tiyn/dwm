@@ -20,7 +20,7 @@ static const char normfgcolor[]     = "#dfdfdf";
 static const char selfgcolor[]      = "#eeeeee";
 static const char selbordercolor[]  = "#555a63";
 static const char selbgcolor[]      = "#282828";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
