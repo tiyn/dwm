@@ -52,11 +52,11 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "M",      monocle },
-	{ "T",      tile },    /* first entry is default */
-	{ "D",      deck },
-	{ "B",      bstack },
-	{ "=",      bstackhoriz },
+	{ "M",      monocle },
+	{ "T",      tile },    /* first entry is default */
+	{ "D",      deck },
+	{ "B",      bstack },
+	{ "B",      bstackhoriz },
 	{ "F",      NULL },    /* no layout function means floating behavior */
 };
 
@@ -120,8 +120,7 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button1,        setlayout,      {.v = 0 } },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
 	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
