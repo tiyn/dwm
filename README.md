@@ -13,9 +13,9 @@ This repository is set up according to the
 
 The list below shows the currently applied patches to the master branch.
 
+- dwm-activetagindicatorbar-6.2.diff (show bar as window indicator)
 - dwm-actualfullscreen-20191112-cb3f58a.diff (enables true fullscreen)
 - dwm-alpha-20180613-b69c870.diff (adds transparency)
-- dwm-alttagsdecoration-2020010304-cb3f58a.diff (enables different icons for tags with windows)
 - dwm-bottomstack-20160719-56a31dc.diff (adds bottomstack and bottomstackhorizontal layout)
 - dwm-center-6.1.diff (adds ability to center floating windows at launch)
 - dwm-deck-6.0.diff (adds deck layout)
