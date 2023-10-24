@@ -62,3 +62,10 @@ build are the following.
 | Super | Shift | . | Add to monitor lower in stack |
 | Super | Shift | , | Add to monitor higher in stack |
 | Alt   | | Tab | (Tiling/Deck) Focus window lower in stack than current  |
+
+## Installation
+
+The most basic way is to clone the repository and then invoke make.
+
+- `git clone https://github.com/tiyn/dwm`
+- `make clean install`
