@@ -25,6 +25,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-statusallmons-6.2.diff (display statusbar on every monitors)
 - dwm-statuscmd-6.2.diff (enables dwmblocks compatibility)
 - dwm-systray-6.2.diff (adds a systray to statusbar)
+- dwm-zeroastag-22032023-0aea805.diff (adds a tenth tag on 0)
 
 ## Hotkeys
 
