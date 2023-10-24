@@ -18,6 +18,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-alpha-20180613-b69c870.diff (adds transparency)
 - dwm-bottomstack-20160719-56a31dc.diff (adds bottomstack and bottomstackhorizontal layout)
 - dwm-center-6.1.diff (adds ability to center floating windows at launch)
+- dwm-cyclelayouts-20180524-6.2.diff (adds ability to cycle through layouts)
 - dwm-deck-6.0.diff (adds deck layout)
 - dwm-noborder-6.2.diff (removes border if there is only one window)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
