@@ -128,7 +128,7 @@ static Button buttons[] = {
   { ClkLtSymbol,    0,          Button1,  cyclelayout,    {.i = +1} },
   { ClkLtSymbol,    0,          Button2,  setlayout,      {.v = &layouts[0]} },
   { ClkLtSymbol,    0,          Button3,  cyclelayout,    {.i = -1} },
-  { ClkWinTitle,    0,          Button2,  zoom,           {0} },
+  { ClkWinTitle,    0,          Button2,  focusstack,     {.i = +1} },
   { ClkStatusText,  0,          Button1,  sigdwmblocks,   {.i = 1} },
   { ClkStatusText,  0,          Button2,  sigdwmblocks,   {.i = 2} },
   { ClkStatusText,  0,          Button3,  sigdwmblocks,   {.i = 3} },
