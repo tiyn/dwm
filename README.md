@@ -21,6 +21,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-cyclelayouts-20180524-6.2.diff (adds ability to cycle through layouts)
 - dwm-deck-6.0.diff (adds deck layout)
 - dwm-noborder-6.2.diff (removes border if there is only one window)
+- dwm-notitle-6.2.diff (removes window title in the middle of the bar)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
 - dwm-status2d-6.2.diff (adds colors and ability to draw rectangles)
 - dwm-statusallmons-6.2.diff (display statusbar on every monitors)
