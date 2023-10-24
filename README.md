@@ -61,3 +61,4 @@ build are the following.
 | Super | Shift | 1/2/.../9/0 | Add current window to tag 1/2/.../9/0 |
 | Super | Shift | . | Add to monitor lower in stack |
 | Super | Shift | , | Add to monitor higher in stack |
+| Alt   | | Tab | (Tiling/Deck) Focus window lower in stack than current  |
