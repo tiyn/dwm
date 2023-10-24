@@ -40,8 +40,7 @@ build are the following.
 | Super | | j | (Tiling/Deck) Focus window lower in stack than current |
 | Super | | k | (Tiling/Deck) Focus window higher in stack than current |
 | Super | | l | (Tiling/Deck) Focus window lower in stack than current |
-| Super | | 0 | Show all tags |
-| Super | | 1/2/.../9 | Show tag 1/2/.../9 |
+| Super | | 1/2/.../9/0 | Show tag 1/2/.../9/0 |
 | Super | | . | Show monitor lower in stack |
 | Super | | , | Show monitor higher in stack |
 | Super | Shift | Escape | Quit dwm |
@@ -59,7 +58,6 @@ build are the following.
 | Super | Shift | u | Enable bottomstack layout |
 | Super | Shift | v | Enable bottomstackhorizontal layout |
 | Super | Shift | z | (Tiling/Deck) Decrease master window size |
-| Super | Shift | 0 | Add current window to all tag |
-| Super | Shift | 1/2/.../9 | Add current window to tag 1/2/.../9 |
+| Super | Shift | 1/2/.../9/0 | Add current window to tag 1/2/.../9/0 |
 | Super | Shift | . | Add to monitor lower in stack |
 | Super | Shift | , | Add to monitor higher in stack |
