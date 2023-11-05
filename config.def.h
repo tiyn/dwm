@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	{ "threema-web",  NULL,     NULL, 1 << 4,   0,          0,          1 },
 	{ "thunderbird",  NULL,     NULL, 1 << 4,   0,          0,          1 },
 	{ "Signal",       NULL,     NULL, 1 << 4,   0,          0,          1 },
+	{ "Sonixd",       NULL,     NULL, 1 << 8,   0,          0,          1 },
 };
 
 /* layout(s) */
