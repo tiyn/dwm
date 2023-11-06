@@ -44,6 +44,7 @@ static const Rule rules[] = {
 	 */
 	/* class          instance  title tags mask iscentered  isfloating  monitor */
 	{ "discord",      NULL,     NULL, 1 << 2,   0,          0,          1 },
+	{ "Element",      NULL,     NULL, 1 << 2,   0,          0,          1 },
 	{ "easyeffects",  NULL,     NULL, 1 << 9,   0,          0,          1 },
 	{ "Pavucontrol",  NULL,     NULL, 1 << 9,   0,          0,          1 },
 	{ "KeePassXC",    NULL,     NULL, 1 << 9,   0,          0,          0 },
