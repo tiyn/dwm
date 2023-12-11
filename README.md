@@ -23,6 +23,7 @@ The list below shows the currently applied patches to the master branch.
 - dwm-noborder-6.2.diff (removes border if there is only one window)
 - dwm-notitle-6.2.diff (removes window title in the middle of the bar)
 - dwm-pertag-20170513-ceac8c9.diff (allows having a layout/mwfact/barpos/nmaster per tag)
+- dwm-quitprompt-20220718-6613d9f.diff (adds a confirmation prompt before exiting dwm)
 - dwm-status2d-6.2.diff (adds colors and ability to draw rectangles)
 - dwm-statusallmons-6.2.diff (display statusbar on every monitors)
 - dwm-statuscmd-6.2.diff (enables dwmblocks compatibility)
@@ -43,7 +44,7 @@ build are the following.
 | Super | | 1/2/.../9/0 | Show tag 1/2/.../9/0 |
 | Super | | . | Show monitor lower in stack |
 | Super | | , | Show monitor higher in stack |
-| Super | Shift | Escape | Quit dwm |
+| Super | Shift | Escape | Quit dwm with call for confirmation |
 | Super | Shift | b | Toggle dwmbar |
 | Super | Shift | c | Enable deck(/card) layout |
 | Super | Shift | d | Toggle floating/tiled for selected window |

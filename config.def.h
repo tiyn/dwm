@@ -86,7 +86,7 @@ static const Layout layouts[] = {
 
 static Key keys[] = {
   /* modifier           key         function        argument */
-  { MODKEY|ShiftMask,   XK_Escape,  quit,           {0} },
+  { MODKEY|ShiftMask,   XK_Escape,  quitprompt,           {0} },
   { MODKEY|ShiftMask,   XK_b,       togglebar,      {0} },
   { MODKEY|ShiftMask,   XK_c,       setlayout,      {.v = &layouts[2]} },
   { MODKEY|ShiftMask,   XK_d,       togglefloating, {0} },
