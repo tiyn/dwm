@@ -66,6 +66,10 @@ build are the following.
 
 ## Installation
 
+The following programs are required to be installed for full functionality.
+
+- [dmenu](https://github.com/tiyn/dmenu)
+
 The most basic way is to clone the repository and then invoke make.
 
 - `git clone https://github.com/tiyn/dwm`
