@@ -42,19 +42,20 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class          instance  title tags mask iscentered  isfloating  monitor */
-	{ "discord",      NULL,     NULL, 1 << 2,   0,          0,          1 },
-	{ "Element",      NULL,     NULL, 1 << 2,   0,          0,          1 },
-	{ "easyeffects",  NULL,     NULL, 1 << 9,   0,          0,          1 },
-	{ "Pavucontrol",  NULL,     NULL, 1 << 9,   0,          0,          1 },
-	{ "KeePassXC",    NULL,     NULL, 1 << 9,   0,          0,          0 },
-	{ "firefox",      NULL,     NULL, 1 << 1,   0,          0,          -1 },
-	{ "steam",        NULL,     NULL, 1 << 2,   0,          0,          0 },
-	{ "Lutris",       NULL,     NULL, 1 << 2,   0,          0,          0 },
-	{ "threema-web",  NULL,     NULL, 1 << 4,   0,          0,          1 },
-	{ "thunderbird",  NULL,     NULL, 1 << 4,   0,          0,          1 },
-	{ "Signal",       NULL,     NULL, 1 << 4,   0,          0,          1 },
-	{ "Sonixd",       NULL,     NULL, 1 << 8,   0,          0,          1 },
+	/* class              instance  title tags    iscentered  isfloating  monitor */
+	{ "discord",          0,        0,    1 << 2, 0,          0,          1 },
+	{ "TelegramDesktop",  0,        0,    1 << 2, 0,          0,          1 },
+	{ "Element",          0,        0,    1 << 2, 0,          0,          1 },
+	{ "easyeffects",      0,        0,    1 << 9, 0,          0,          1 },
+	{ "Pavucontrol",      0,        0,    1 << 9, 0,          0,          1 },
+	{ "KeePassXC",        0,        0,    1 << 9, 0,          0,          0 },
+	{ "firefox",          0,        0,    1 << 1, 0,          0,          -1 },
+	{ "steam",            0,        0,    1 << 2, 0,          0,          0 },
+	{ "Lutris",           0,        0,    1 << 2, 0,          0,          0 },
+	{ "threema-web",      0,        0,    1 << 4, 0,          0,          1 },
+	{ "thunderbird",      0,        0,    1 << 4, 0,          0,          1 },
+	{ "Signal",           0,        0,    1 << 4, 0,          0,          1 },
+	{ "Sonixd",           0,        0,    1 << 8, 0,          0,          1 },
 };
 
 /* layout(s) */
