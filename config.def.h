@@ -43,8 +43,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class              instance  title tags    iscentered  isfloating  monitor */
-	{ "firefox",          0,        0,    1 << 1, 0,          0,          -1 },
+	{ "firefox",          0,        0,    1 << 1, 0,          0,         -1 },
 	{ "Lutris",           0,        0,    1 << 2, 0,          0,          0 },
+	{ "zenity",           0,        0,         0, 0,          1,         -1 },
 	{ "steam",            0,        0,    1 << 2, 0,          0,          0 },
 	{ "discord",          0,        0,    1 << 2, 0,          0,          1 },
 	{ "TeamSpeak",        0,        0,    1 << 2, 0,          0,          1 },
@@ -56,7 +57,7 @@ static const Rule rules[] = {
 	{ "Sonixd",           0,        0,    1 << 8, 0,          0,          1 },
 	{ "KeePassXC",        0,        0,    1 << 9, 0,          0,          0 },
 	{ "easyeffects",      0,        0,    1 << 9, 0,          0,          1 },
-	{ "Pavucontrol",      0,        0,    1 << 9, 0,          0,          1 },
+	{ "pavucontrol",      0,        0,    1 << 9, 0,          0,          1 },
 };
 
 /* layout(s) */
