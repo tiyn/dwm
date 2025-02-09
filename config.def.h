@@ -44,6 +44,7 @@ static const Rule rules[] = {
 	 */
 	/* class              instance  title tags    iscentered  isfloating  monitor */
 	{ "firefox",          0,        0,    1 << 1, 0,          0,         -1 },
+	{ "zen",              0,        0,    1 << 1, 0,          0,         -1 },
 	{ "Lutris",           0,        0,    1 << 2, 0,          0,          0 },
 	{ "zenity",           0,        0,         0, 0,          1,         -1 },
 	{ "steam",            0,        0,    1 << 2, 0,          0,          0 },
