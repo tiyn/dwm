@@ -42,23 +42,24 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class              instance  title tags    iscentered  isfloating  monitor */
-	{ "firefox",          0,        0,    1 << 1, 0,          0,         -1 },
-	{ "zen",              0,        0,    1 << 1, 0,          0,         -1 },
-	{ "Lutris",           0,        0,    1 << 2, 0,          0,          0 },
-	{ "zenity",           0,        0,         0, 0,          1,         -1 },
-	{ "steam",            0,        0,    1 << 2, 0,          0,          0 },
-	{ "discord",          0,        0,    1 << 2, 0,          0,          1 },
-	{ "TeamSpeak",        0,        0,    1 << 2, 0,          0,          1 },
-	{ "Element",          0,        0,    1 << 2, 0,          0,          1 },
-	{ "Signal",           0,        0,    1 << 4, 0,          0,          1 },
-	{ "TelegramDesktop",  0,        0,    1 << 4, 0,          0,          1 },
-	{ "threema-web",      0,        0,    1 << 4, 0,          0,          1 },
-	{ "thunderbird",      0,        0,    1 << 4, 0,          0,          1 },
-	{ "Sonixd",           0,        0,    1 << 8, 0,          0,          1 },
-	{ "KeePassXC",        0,        0,    1 << 9, 0,          0,          0 },
-	{ "easyeffects",      0,        0,    1 << 9, 0,          0,          1 },
-	{ "pavucontrol",      0,        0,    1 << 9, 0,          0,          1 },
+	/* class              instance title                        tags center float mon */
+	{ "firefox",          0,  0,                                1 << 1, 0,  0,  -1 },
+	{ "zen",              0,  0,                                1 << 1, 0,  0,  -1 },
+	{ "Lutris",           0,  0,                                1 << 2, 0,  0,   0 },
+	{ "zenity",           0,  0,                                     0, 0,  1,  -1 },
+	{ "steam",            0,  0,                                1 << 2, 0,  0,   0 },
+	{ "discord",          0,  0,                                1 << 2, 0,  0,   1 },
+	{ "TeamSpeak",        0,  0,                                1 << 2, 0,  0,   1 },
+	{ "Element",          0,  0,                                1 << 2, 0,  0,   1 },
+	{ "Signal",           0,  0,                                1 << 4, 0,  0,   1 },
+	{ "TelegramDesktop",  0,  0,                                1 << 4, 0,  0,   1 },
+	{ "threema-web",      0,  0,                                1 << 4, 0,  0,   1 },
+	{ "thunderbird",      0,  0,                                1 << 4, 0,  0,   1 },
+	{ "Sonixd",           0,  0,                                1 << 8, 0,  0,   1 },
+	{ "KeePassXC",        0,  "Unlock Database - KeePassXC",    1 << 1, 0,  0,   0 },
+	{ "KeePassXC",        0,  0,                                1 << 9, 0,  0,   0 },
+	{ "easyeffects",      0,  0,                                1 << 9, 0,  0,   1 },
+	{ "pavucontrol",      0,  0,                                1 << 9, 0,  0,   1 },
 };
 
 /* layout(s) */
