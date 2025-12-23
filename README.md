@@ -62,6 +62,8 @@ build are the following.
 | Super | Shift | , | Add to monitor higher in stack |
 | Alt   | | Tab | (Tiling/Deck) Focus window lower in stack than current  |
 
+Additionally the right hand side control key is set to be used as the compose key.
+
 ## Installation
 
 The following programs are required to be installed for full functionality.
