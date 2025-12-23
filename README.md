@@ -3,7 +3,8 @@
 This is my patched version of dwm.
 The base version is directly from suckless.org.
 This belongs to my larbs installation script and depends heavily on its scripts and programs.
-It is supposed to work in the environment after the larbs base installation.
+It is supposed to work in the environment after the
+[larbs base installation](https://github.com/tiyn/larbs).
 This repository is set up according to the
 [suckless entry of my wiki](https://github.com/tiyn/wiki/blob/master/wiki/linux/suckless.md).
 
@@ -33,34 +34,34 @@ The list below shows the currently applied patches to the master branch.
 There are various shortcuts and hotkeys used in this version. Included in my
 build are the following.
 
-| ModKey | Shift | Key | Function |
-| ------ | ----- | --- | -------- |
-| Super | | h | (Tiling/Deck) Focus window higher in stack than current |
-| Super | | j | (Tiling/Deck) Focus window lower in stack than current |
-| Super | | k | (Tiling/Deck) Focus window higher in stack than current |
-| Super | | l | (Tiling/Deck) Focus window lower in stack than current |
-| Super | | 1/2/.../9/0 | Show tag 1/2/.../9/0 |
-| Super | | . | Show monitor lower in stack |
-| Super | | , | Show monitor higher in stack |
-| Super | Shift | Escape | Quit dwm with call for confirmation |
-| Super | Shift | b | Toggle dwmbar |
-| Super | Shift | c | Enable deck(/card) layout |
-| Super | Shift | d | Toggle floating/tiled for selected window |
-| Super | Shift | f | Toggle fullscreen |
-| Super | Shift | h | (Tiling/Deck) Make current window the master window |
-| Super | Shift | j | (Tiling/Deck) Make current window the master window |
-| Super | Shift | k | (Tiling/Deck) Make current window the master window |
-| Super | Shift | m | Enable monocle layout |
-| Super | Shift | o | (Tiling/Deck) Increase master window size |
-| Super | Shift | q | Close current window |
-| Super | Shift | t | Enable tiling layout |
-| Super | Shift | u | Enable bottomstack layout |
-| Super | Shift | v | Enable bottomstackhorizontal layout |
-| Super | Shift | z | (Tiling/Deck) Decrease master window size |
-| Super | Shift | 1/2/.../9/0 | Add current window to tag 1/2/.../9/0 |
-| Super | Shift | . | Add to monitor lower in stack |
-| Super | Shift | , | Add to monitor higher in stack |
-| Alt   | | Tab | (Tiling/Deck) Focus window lower in stack than current  |
+| ModKey | Shift | Key         | Function                                                |
+| ------ | ----- | ----------- | ------------------------------------------------------- |
+| Super  |       | h           | (Tiling/Deck) Focus window higher in stack than current |
+| Super  |       | j           | (Tiling/Deck) Focus window lower in stack than current  |
+| Super  |       | k           | (Tiling/Deck) Focus window higher in stack than current |
+| Super  |       | l           | (Tiling/Deck) Focus window lower in stack than current  |
+| Super  |       | 1/2/.../9/0 | Show tag 1/2/.../9/0                                    |
+| Super  |       | .           | Show monitor lower in stack                             |
+| Super  |       | ,           | Show monitor higher in stack                            |
+| Super  | Shift | Escape      | Quit dwm with call for confirmation                     |
+| Super  | Shift | b           | Toggle dwmbar                                           |
+| Super  | Shift | c           | Enable deck(/card) layout                               |
+| Super  | Shift | d           | Toggle floating/tiled for selected window               |
+| Super  | Shift | f           | Toggle fullscreen                                       |
+| Super  | Shift | h           | (Tiling/Deck) Make current window the master window     |
+| Super  | Shift | j           | (Tiling/Deck) Make current window the master window     |
+| Super  | Shift | k           | (Tiling/Deck) Make current window the master window     |
+| Super  | Shift | m           | Enable monocle layout                                   |
+| Super  | Shift | o           | (Tiling/Deck) Increase master window size               |
+| Super  | Shift | q           | Close current window                                    |
+| Super  | Shift | t           | Enable tiling layout                                    |
+| Super  | Shift | u           | Enable bottomstack layout                               |
+| Super  | Shift | v           | Enable bottomstackhorizontal layout                     |
+| Super  | Shift | z           | (Tiling/Deck) Decrease master window size               |
+| Super  | Shift | 1/2/.../9/0 | Add current window to tag 1/2/.../9/0                   |
+| Super  | Shift | .           | Add to monitor lower in stack                           |
+| Super  | Shift | ,           | Add to monitor higher in stack                          |
+| Alt    |       | Tab         | (Tiling/Deck) Focus window lower in stack than current  |
 
 Additionally the right hand side control key is set to be used as the compose key.
 
