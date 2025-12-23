@@ -60,6 +60,7 @@ static const Rule rules[] = {
 	{ "KeePassXC",        0,  0,                                1 << 9, 0,  0,   0 },
 	{ "easyeffects",      0,  0,                                1 << 9, 0,  0,   1 },
 	{ "pavucontrol",      0,  0,                                1 << 9, 0,  0,   1 },
+	{ "Onboard",          0,  0,                                     0, 0,  1,   0 },
 };
 
 /* layout(s) */
